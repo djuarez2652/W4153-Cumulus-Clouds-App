@@ -18,14 +18,14 @@ public class Notification {
     @Column(name = "notification_to_id", nullable = false)
     private UUID toId;
 
-    @Column(name = "notification_msg", nullable = false)
-    private Integer msg;
+    @Column(name = "notification_msg")
+    private String msg;
 
-    @Column(name = "notification_time", nullable = false, columnDefinition = "TIME SET DEFAULT CURRENT_TIME")
+    @Column(name = "notification_time")
     private String time;
 
     public UUID getNotificationId() {
-        return transactionId;
+        return notificationId;
     }
 
     public void setNotificationId(UUID notificationId) {
@@ -56,11 +56,11 @@ public class Notification {
         this.msg = newMsg;
     }
 
-    public Integer getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Integer newTime) {
+    public void setTime(String newTime) {
         this.time = newTime;
     }
 }
