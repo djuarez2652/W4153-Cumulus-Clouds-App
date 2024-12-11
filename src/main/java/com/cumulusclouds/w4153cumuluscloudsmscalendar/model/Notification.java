@@ -18,10 +18,10 @@ public class Notification {
     @Column(name = "notification_to_id", nullable = false)
     private UUID toId;
 
-    @Column(name = "notification_msg")
+    @Column(name = "notification_msg", nullable = false)
     private Integer msg;
 
-    @Column(name = "notification_time")
+    @Column(name = "notification_time", nullable = false, columnDefinition = "TIME SET DEFAULT CURRENT_TIME")
     private String time;
 
     public UUID getNotificationId() {
